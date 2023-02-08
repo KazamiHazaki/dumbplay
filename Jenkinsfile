@@ -1,5 +1,5 @@
 def secret = 'admin1'
-def server = 'admin1@103.189.235.91'
+def server = 'admin1@103.37.124.70'
 def directory = 'dumbplay-frontend'
 def branch = 'master'
 def container = 'dumbplay-fe'
