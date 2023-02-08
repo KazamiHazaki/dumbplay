@@ -1,7 +1,8 @@
-FROM node:10
-WORKDIR /usr/src/app
-COPY package*.json ./
+FROM node:16-alpine
+WORKDIR /dumbplay-fe
+COPY . /dumbplay-fe
 RUN npm install
-COPY . .
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD ["npm","start"]
+
+

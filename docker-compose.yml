@@ -1,13 +1,10 @@
-version: '3.7'
+version: '3.3'
 services:
- frontend-dumbplay:
-   container_name: frontend-dumbplay
-   image: frontend:latest
+ dumbplay-fe:
+   container_name: dumbplay-fe
+   image: dumbplay-fe-alpine:0.5
    stdin_open: true
    ports:
-     - 4000:3000
- backend-dumbplay:
-   container_name: backend-dumbplay
-   image: backend:latest
-   ports:
-     - 6000:5000
+     - 3000:3000
+   volumes:
+     - "~/dumbplay-frontend/src/config/api.js:/wayshub-fe/src/config/api.js"
