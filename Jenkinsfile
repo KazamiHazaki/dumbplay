@@ -70,13 +70,5 @@ steps {
                 }
     }   
 }
-
-post {
-    always {
-    discordSend description: '', enableArtifactsList: true, footer: '', image: 'https://w7.pngwing.com/pngs/435/546/png-transparent-nico-yazawa-love-live-sunshine-anime-love-live-school-idol-festival-alisa-ayase-anime-child-face-black-hair.png', link: 'https://github.com/KazamiHazaki/Dumbways-FinalTask', result: '', scmWebUrl: '', showChangeset: true, thumbnail: '', title: 'Wayshub-app', webhookURL: 'https://discord.com/api/webhooks/1055488071665188934/yppYX92F1vt_HPuQ6uDFMmCn1PA8MRJ1GeoZuS8TE4CO289bZGT7L2TjDpRiFDCcGFmO'
-    }
-     }
-
-
     }
 }
