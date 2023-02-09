@@ -62,18 +62,11 @@ pipeline{
 
 steps {
 
-    script{
-
-    withCredentials([string(credentialsId: ‘telegramToken’, variable: ‘TOKEN’),
-    string(credentialsId: ‘telegramChatId’, variable: ‘CHAT_ID’)]) {
-    sh ”””
-curl -s -X POST https://api.telegram.org/bot6227949207:AAGbLz03ycwf8Yz1G7wKFzESLkskbkgxeew/sendMessage -d chat_id=${CHAT_ID} -d parse_mode=”HTML” -d text=”<b>Project</b> : POC \
-<b>Branch</b>: master \
-<b>Build </b> : OK \
-<b>Test suite</b> = Passed”
-”””
-            }
-        }
+     sshagent([secret]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                    curl -s -X POST https://api.telegram.org/bot6227949207:AAGbLz03ycwf8Yz1G7wKFzESLkskbkgxeew/sendMessage -d chat_id=5239244706 -d text="Build Complete Bang"
+                    EOF"""
+                }
     }   
 }
     }
