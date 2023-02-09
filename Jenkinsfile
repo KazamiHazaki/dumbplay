@@ -27,7 +27,7 @@ pipeline{
                 sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${directory}
-                    build -t kazamisei98/dumbplay-fe-slim:0.1 .
+                    docker build -t kazamisei98/dumbplay-fe-slim:0.1 .
                     exit
                     EOF"""
                 }
