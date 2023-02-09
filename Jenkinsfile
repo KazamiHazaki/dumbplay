@@ -73,9 +73,10 @@ steps {
 
 post {
     always {
-    discordSend description: '', enableArtifactsList: true, footer: '', image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sonora.id%2Fread%2F423523563%2Farti-yowai-mo-dalam-bahasa-jepang-kata-populer-yang-diungkapkan-gojo-satoru-dalam-anime-jujutsu-kaisen&psig=AOvVaw1gtM_y9PGrSbf_WCgIik6O&ust=1676019705673000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNiVuoyKiP0CFQAAAAAdAAAAABAc', link: 'https://github.com/KazamiHazaki/Dumbways-FinalTask', result: '', scmWebUrl: '', showChangeset: true, thumbnail: '', title: 'Wayshub-app', webhookURL: 'https://discord.com/api/webhooks/1055488071665188934/yppYX92F1vt_HPuQ6uDFMmCn1PA8MRJ1GeoZuS8TE4CO289bZGT7L2TjDpRiFDCcGFmO'
+    discordSend description: '', enableArtifactsList: true, footer: '', image: 'https://w7.pngwing.com/pngs/435/546/png-transparent-nico-yazawa-love-live-sunshine-anime-love-live-school-idol-festival-alisa-ayase-anime-child-face-black-hair.png', link: 'https://github.com/KazamiHazaki/Dumbways-FinalTask', result: '', scmWebUrl: '', showChangeset: true, thumbnail: '', title: 'Wayshub-app', webhookURL: 'https://discord.com/api/webhooks/1055488071665188934/yppYX92F1vt_HPuQ6uDFMmCn1PA8MRJ1GeoZuS8TE4CO289bZGT7L2TjDpRiFDCcGFmO'
     }
      }
+
 
     }
 }
