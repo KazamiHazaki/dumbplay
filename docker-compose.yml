@@ -1,8 +1,8 @@
 version: '3.3'
 services:
  dumbplay-fe:
-   container_name: dumbplay-fe
-   image: dumbplay-fe-alpine:0.5
+   container_name: dumbplay-fe-test
+   image: kazamisei98/dumbplay-fe-slim:0.1
    stdin_open: true
    ports:
      - 3000:3000

@@ -9,7 +9,7 @@ pipeline{
     agent any
 
     stages{
-        stage ('docker delete & git pull'){
+        stage ('delete & git pull'){
             steps{
                 sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
@@ -22,12 +22,12 @@ pipeline{
                 }
             }
         }
-        stage ('build docker'){
+        stage ('dockerize app'){
             steps{
                 sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${directory}
-                    docker-compose build
+                    build -t kazamisei98/dumbplay-fe-slim:0.1 .
                     exit
                     EOF"""
                 }
@@ -39,6 +39,18 @@ pipeline{
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                     cd ${directory}
                     docker-compose up -d
+                    exit
+                    EOF"""
+                }
+            }
+        }
+
+           stage ('upload image to dockerhub '){
+            steps{
+                sshagent([secret]) {
+                    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                    cd ${directory}
+                    docker push kazamisei98/dumbplay-fe-slim:0.1
                     exit
                     EOF"""
                 }
