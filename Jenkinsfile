@@ -64,7 +64,7 @@ steps {
 
      sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-                    curl -s -X POST https://api.telegram.org/bot6227949207:AAGbLz03ycwf8Yz1G7wKFzESLkskbkgxeew/sendMessage -d chat_id=5239244706 -d text='Build Frontend Complete Bang'
+                    curl -s -X POST https://api.telegram.org/bot6033722165:AAFqBd0-IxtZW4MacIekfTvzql1qLdRCbCk/sendMessage -d chat_id=6192024733 -d text='Build Frontend Complete Bang'
                     EOF"""
 
                 }
